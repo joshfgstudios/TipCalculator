@@ -80,7 +80,7 @@
                                     <constraint firstAttribute="width" constant="68" id="EVv-cC-XzP"/>
                                 </constraints>
                                 <state key="normal" title="Other...">
-                                    <color key="titleColor" red="1" green="0.34745175189999999" blue="0.43113101739999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.41190732759999998" green="0.8451239224" blue="0.25959492429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="MqO-ii-smq" kind="show" identifier="goToOther" id="Znd-j9-LDY"/>
@@ -92,7 +92,7 @@
                                     <constraint firstAttribute="width" constant="354" id="P9K-Qj-9zg"/>
                                     <constraint firstAttribute="height" constant="75" id="d9x-cF-lcC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -102,16 +102,31 @@
                                     <constraint firstAttribute="height" constant="29" id="Ev0-Rn-Mhw"/>
                                     <constraint firstAttribute="width" constant="102" id="jsG-20-2lG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLR-sY-L8s">
+                                <rect key="frame" x="228" y="273" width="144" height="30"/>
+                                <color key="backgroundColor" red="0.41190732759999998" green="0.8451239224" blue="0.25959492429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="LjY-nV-Kmc"/>
+                                    <constraint firstAttribute="height" constant="30" id="pXO-6d-HC4"/>
+                                </constraints>
+                                <state key="normal" title="Calculate Custom">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCalcCustomerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efh-jp-qPO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iOb-dc-gtQ" firstAttribute="top" secondItem="d90-yk-2V9" secondAttribute="bottom" constant="100" id="1Fn-jb-fgt">
                                 <variation key="heightClass=compact" constant="65"/>
                             </constraint>
+                            <constraint firstItem="bLR-sY-L8s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3PT-2t-oTU"/>
                             <constraint firstItem="d90-yk-2V9" firstAttribute="top" secondItem="VLb-NW-hf4" secondAttribute="bottom" constant="25" id="Dk5-1n-Qyk">
                                 <variation key="heightClass=compact" constant="15"/>
                             </constraint>
@@ -121,7 +136,7 @@
                             </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iOb-dc-gtQ" secondAttribute="bottom" constant="134" id="LPh-Ng-ioO"/>
                             <constraint firstItem="aby-ZB-KJy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="T5c-Xo-wZG">
-                                <variation key="heightClass=compact" constant="50"/>
+                                <variation key="heightClass=compact" constant="35"/>
                             </constraint>
                             <constraint firstItem="VLb-NW-hf4" firstAttribute="top" secondItem="aby-ZB-KJy" secondAttribute="bottom" constant="37" id="Ttc-My-IAA">
                                 <variation key="heightClass=compact" constant="10"/>
@@ -129,6 +144,7 @@
                             <constraint firstItem="VLb-NW-hf4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YFY-qm-8QB"/>
                             <constraint firstItem="iOb-dc-gtQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jdI-ay-MCV"/>
                             <constraint firstItem="d90-yk-2V9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o9w-O7-ebZ"/>
+                            <constraint firstItem="bLR-sY-L8s" firstAttribute="top" secondItem="d90-yk-2V9" secondAttribute="bottom" constant="1" id="sQq-fo-YX6"/>
                             <constraint firstItem="aby-ZB-KJy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tin-q2-qqv"/>
                         </constraints>
                         <variation key="default">
@@ -141,6 +157,7 @@
                         <outlet property="btn15" destination="xyY-Xq-aEH" id="nVZ-Dk-JNO"/>
                         <outlet property="btn20" destination="eXf-NL-pA6" id="yob-S2-zms"/>
                         <outlet property="btn25" destination="dwJ-gs-vRR" id="e9C-kb-FNi"/>
+                        <outlet property="btnCustom" destination="bLR-sY-L8s" id="d4T-0G-6kS"/>
                         <outlet property="btnOther" destination="d90-yk-2V9" id="x6k-U5-WZL"/>
                         <outlet property="lblTipAmount" destination="Riq-Oc-ctN" id="hAh-S1-8Gv"/>
                         <outlet property="lblTotal" destination="iOb-dc-gtQ" id="KEa-0x-Ks5"/>
@@ -149,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1548" y="633"/>
+            <point key="canvasLocation" x="1372" y="747"/>
         </scene>
         <!--Other View Controller-->
         <scene sceneID="xFE-HN-oRq">
@@ -189,7 +206,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="goToMain" id="fqc-qF-XPe"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter custom tip amount..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJR-sy-sks">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter custom tip percentage..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJR-sy-sks">
                                 <rect key="frame" x="159" y="170" width="282" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="kzW-Kq-f6h"/>
@@ -218,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEt-jK-ye8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="644"/>
+            <point key="canvasLocation" x="2100" y="699"/>
         </scene>
     </scenes>
 </document>

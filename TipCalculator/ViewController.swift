@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnOther: UIButton!
     @IBOutlet weak var lblTipAmount: UILabel!
     @IBOutlet weak var lblTotal: UILabel!
+    @IBOutlet weak var btnCustom: UIButton!
     
     //Variables
     //-----------------
@@ -68,6 +69,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func onCalcCustomerPressed(sender: AnyObject) {
+        if ((txtInput.text?.isEmpty) == true) || txtInput.text == "." {
+            let alert = UIAlertController(title: "Text Field Empty", message: "Please enter your bill subtotal.", preferredStyle: .Alert)
+            let alertAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
+            alert.addAction(alertAction)
+            
+            presentViewController(alert, animated: true, completion: nil)
+        } else {
+            calculateTip((Double(txtInput.text!))!, percentage: otherTipAmnt)
+        }
+    }
+    
+    
     
     //Functions
     //-----------------
@@ -76,6 +90,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         addDoneButtonOnKeyboard()
         self.txtInput.delegate = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if otherTipAmnt != 0.0 {
+            btnCustom.hidden = false
+        } else {
+            btnCustom.hidden = true
+        }
     }
     
     func calculateTip(subtotal: Double, percentage: Double) {
