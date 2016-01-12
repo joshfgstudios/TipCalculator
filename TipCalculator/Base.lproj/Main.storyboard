@@ -80,7 +80,7 @@
                                     <constraint firstAttribute="width" constant="68" id="EVv-cC-XzP"/>
                                 </constraints>
                                 <state key="normal" title="Other...">
-                                    <color key="titleColor" red="0.41190732759999998" green="0.8451239224" blue="0.25959492429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.7635443234" blue="0.29500607839999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="MqO-ii-smq" kind="show" identifier="goToOther" id="Znd-j9-LDY"/>
@@ -108,7 +108,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLR-sY-L8s">
                                 <rect key="frame" x="228" y="273" width="144" height="30"/>
-                                <color key="backgroundColor" red="0.41190732759999998" green="0.8451239224" blue="0.25959492429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.7635443234" blue="0.29500607839999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="144" id="LjY-nV-Kmc"/>
                                     <constraint firstAttribute="height" constant="30" id="pXO-6d-HC4"/>
@@ -121,7 +121,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97838268979999998" green="0.97838268979999998" blue="0.97838268979999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="iOb-dc-gtQ" firstAttribute="top" secondItem="d90-yk-2V9" secondAttribute="bottom" constant="100" id="1Fn-jb-fgt">
                                 <variation key="heightClass=compact" constant="65"/>
@@ -216,7 +216,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97838268979057597" green="0.97838268979057597" blue="0.97838268979057597" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="k5W-Oy-gHg" firstAttribute="centerX" secondItem="kua-C9-jAi" secondAttribute="centerX" id="0Hm-Cc-YKG"/>
                             <constraint firstItem="aJR-sy-sks" firstAttribute="top" secondItem="304-WP-2sS" secondAttribute="bottom" constant="150" id="Jpy-gy-Xfy">
