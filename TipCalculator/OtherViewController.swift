@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OtherViewController.swift
 //  TipCalculator
 //
 //  Created by Joshua Ide on 12/01/2016.
@@ -8,82 +8,40 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class OtherViewController: UIViewController, UITextFieldDelegate {
 
     //Outlets
-    //----------------
-    @IBOutlet weak var txtInput: UITextField!
-    @IBOutlet weak var btn15: UIButton!
-    @IBOutlet weak var btn20: UIButton!
-    @IBOutlet weak var btn25: UIButton!
-    @IBOutlet weak var btnOther: UIButton!
-    @IBOutlet weak var lblTipAmount: UILabel!
-    @IBOutlet weak var lblTotal: UILabel!
-    
-    //Variables
     //-----------------
-    var otherTipAmnt = 0.0
-
+    @IBOutlet weak var txtOther: UITextField!
+    @IBOutlet weak var btnDone: UIButton!
+    
+    
     //Actions
     //-----------------
-    @IBAction func on15Pressed(sender: AnyObject) {
+    @IBAction func onDonePressed(sender: AnyObject) {
         dismissKeyboard()
         
-        if ((txtInput.text?.isEmpty) == true) || txtInput.text == "." {
-            let alert = UIAlertController(title: "Text Field Empty", message: "Please enter your bill subtotal.", preferredStyle: .Alert)
+        //Check for unallowable input, otherwise perform the segue
+        if ((txtOther.text?.isEmpty) == true) || txtOther.text == "." {
+            let alert = UIAlertController(title: "Text Field Empty", message: "Please enter a tip percentage.", preferredStyle: .Alert)
             let alertAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
             alert.addAction(alertAction)
             
             presentViewController(alert, animated: true, completion: nil)
         } else {
-            calculateTip((Double(txtInput.text!))!, percentage: 15.0)
+            let othr = txtOther.text
+            performSegueWithIdentifier("goToMain", sender: othr)
         }
+
     }
-    
-    @IBAction func on20Pressed(sender: AnyObject) {
-        dismissKeyboard()
-        
-        if ((txtInput.text?.isEmpty) == true) || txtInput.text == "." {
-            let alert = UIAlertController(title: "Text Field Empty", message: "Please enter your bill subtotal.", preferredStyle: .Alert)
-            let alertAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
-            alert.addAction(alertAction)
-            
-            presentViewController(alert, animated: true, completion: nil)
-        } else {
-            calculateTip((Double(txtInput.text!))!, percentage: 20.0)
-        }
-    }
-    
-    @IBAction func on25Pressed(sender: AnyObject) {
-        dismissKeyboard()
-        
-        if ((txtInput.text?.isEmpty) == true) || txtInput.text == "." {
-            let alert = UIAlertController(title: "Text Field Empty", message: "Please enter your bill subtotal.", preferredStyle: .Alert)
-            let alertAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
-            alert.addAction(alertAction)
-            
-            presentViewController(alert, animated: true, completion: nil)
-        } else {
-            calculateTip((Double(txtInput.text!))!, percentage: 25.0)
-        }
-    }
-    
     
     //Functions
     //-----------------
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.txtOther.delegate = self
         
         addDoneButtonOnKeyboard()
-        self.txtInput.delegate = self
-    }
-    
-    func calculateTip(subtotal: Double, percentage: Double) {
-        var tip: Double
-        tip = subtotal * percentage
-        tip = tip / 100
-        lblTipAmount.text = "$\(round(100*tip)/100)"
-        lblTotal.text = "$\(round(100*(subtotal + tip))/100)"
     }
     
     func addDoneButtonOnKeyboard() {
@@ -97,12 +55,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
         items.append(done)
         doneToolbar.items = items as? [UIBarButtonItem]
         
-        self.txtInput.inputAccessoryView = doneToolbar
+        self.txtOther.inputAccessoryView = doneToolbar
         
     }
     
     func dismissKeyboard() {
         self.view.endEditing(true)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //Pass the user input back to main and store it
+        if segue.identifier == "goToMain" {
+            if let mainVC = segue.destinationViewController as? ViewController {
+                if let othrAmt = sender as? String {
+                        mainVC.otherTipAmnt = Double(othrAmt)!
+                }
+            }
+        }
     }
     
     //Text delegate - ensuring valid input
@@ -131,7 +100,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         if unitsCount > 10 {
             return false
-        } // units maximum
+        } // units maximum : here 2 digits
         if decimalCount > 2 {
             return false
         } // decimal maximum
@@ -155,4 +124,3 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
 }
-
