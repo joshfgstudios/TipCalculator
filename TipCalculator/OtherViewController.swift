@@ -35,6 +35,11 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 
     }
     
+    @IBAction func onCancelPressed(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     //Functions
     //-----------------
     override func viewDidLoad() {
