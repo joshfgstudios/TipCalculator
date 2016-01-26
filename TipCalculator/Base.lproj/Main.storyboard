@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -19,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VLb-NW-hf4">
-                                <rect key="frame" x="39" y="76" width="522" height="125"/>
+                                <rect key="frame" x="39" y="96" width="522" height="125"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyY-Xq-aEH">
                                         <rect key="frame" x="0.0" y="0.0" width="522" height="35"/>
@@ -92,14 +91,14 @@
                                 </variation>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljy-dl-aN2">
-                                <rect key="frame" x="70" y="214" width="460" height="1"/>
+                                <rect key="frame" x="70" y="234" width="460" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="tSy-Ts-ggP"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNU-vs-tVj">
-                                <rect key="frame" x="70" y="383" width="460" height="1"/>
+                                <rect key="frame" x="70" y="403" width="460" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="1TN-nC-VCM"/>
@@ -107,7 +106,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d90-yk-2V9">
-                                <rect key="frame" x="541" y="237" width="20" height="18"/>
+                                <rect key="frame" x="541" y="257" width="20" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3vT-gz-DnV"/>
                                     <constraint firstAttribute="width" constant="68" id="EVv-cC-XzP"/>
@@ -128,7 +127,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLR-sY-L8s">
-                                <rect key="frame" x="39" y="228" width="482" height="35"/>
+                                <rect key="frame" x="39" y="248" width="482" height="35"/>
                                 <color key="backgroundColor" red="0.99215686274509807" green="0.40392156862745099" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="144" id="LjY-nV-Kmc"/>
@@ -152,7 +151,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00  |  Tip" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Riq-Oc-ctN">
-                                <rect key="frame" x="39" y="283" width="522" height="29"/>
+                                <rect key="frame" x="39" y="303" width="522" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="Ev0-Rn-Mhw"/>
                                     <constraint firstAttribute="height" constant="29" id="ZIU-fn-wWy"/>
@@ -169,7 +168,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00  |  Total" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOb-dc-gtQ">
-                                <rect key="frame" x="39" y="320" width="522" height="53"/>
+                                <rect key="frame" x="39" y="340" width="522" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="I69-YE-8WH"/>
                                     <constraint firstAttribute="width" constant="354" id="P9K-Qj-9zg"/>
@@ -186,7 +185,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvK-NW-v2k">
-                                <rect key="frame" x="39" y="397" width="522" height="35"/>
+                                <rect key="frame" x="39" y="417" width="522" height="35"/>
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.79607843137254897" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="N8F-kv-hbo"/>
@@ -208,7 +207,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00  |  each" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a63-AI-3G4">
-                                <rect key="frame" x="39" y="440" width="522" height="29"/>
+                                <rect key="frame" x="39" y="460" width="522" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="102" id="Gay-1H-VOd"/>
                                     <constraint firstAttribute="height" constant="29" id="NvL-Tj-sZF"/>
@@ -226,7 +225,7 @@
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter bill subtotal..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aby-ZB-KJy">
-                                <rect key="frame" x="39" y="33" width="522" height="35"/>
+                                <rect key="frame" x="39" y="53" width="522" height="35"/>
                                 <color key="backgroundColor" red="0.97838268979999998" green="0.97838268979999998" blue="0.97838268979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="MVP-s3-j5k"/>
@@ -277,7 +276,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="aby-ZB-KJy" secondAttribute="trailing" constant="19" id="MW2-RI-3zc"/>
                             <constraint firstItem="jNU-vs-tVj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O3g-8S-it5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kvK-NW-v2k" secondAttribute="trailing" constant="19" id="OG5-UW-3Fk"/>
-                            <constraint firstItem="aby-ZB-KJy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="SEo-kb-udG"/>
+                            <constraint firstItem="aby-ZB-KJy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="SEo-kb-udG"/>
                             <constraint firstItem="aby-ZB-KJy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="T5c-Xo-wZG">
                                 <variation key="heightClass=compact" constant="35"/>
                             </constraint>
@@ -318,10 +317,10 @@
                                 <exclude reference="1Fn-jb-fgt"/>
                                 <exclude reference="Hff-ii-Qlr"/>
                                 <exclude reference="jdI-ay-MCV"/>
-                                <exclude reference="LPh-Ng-ioO"/>
                                 <exclude reference="71K-vf-n8w"/>
                                 <exclude reference="Dk5-1n-Qyk"/>
                                 <exclude reference="o9w-O7-ebZ"/>
+                                <exclude reference="LPh-Ng-ioO"/>
                             </mask>
                         </variation>
                     </view>

@@ -4,7 +4,7 @@
 //
 //  Created by Joshua Ide on 12/01/2016.
 //  Copyright © 2016 Fox Gallery Studios. All rights reserved.
-//
+//  version 1.1
 
 import UIKit
 
@@ -90,12 +90,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func onSplitPressed(sender: AnyObject) {
-        let splitPrompt = UIAlertController(title: "Split Bill", message: "Please enter the number of people in your party.", preferredStyle: UIAlertControllerStyle.Alert)
-        splitPrompt.addTextFieldWithConfigurationHandler(addSplitField)
-        splitPrompt.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
-        splitPrompt.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: splitNumEntered))
-        
-        presentViewController(splitPrompt, animated: true, completion: nil)
+        dismissKeyboard()
+        if totalBill != 0.0 {
+            let splitPrompt = UIAlertController(title: "Split Bill", message: "Please enter the number of people in your party.", preferredStyle: UIAlertControllerStyle.Alert)
+            splitPrompt.addTextFieldWithConfigurationHandler(addSplitField)
+            splitPrompt.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
+            splitPrompt.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: splitNumEntered))
+            presentViewController(splitPrompt, animated: true, completion: nil)
+            dismissKeyboard()
+        } else {
+            let splitPrompt = UIAlertController(title: "Split Bill", message: "Please enter the number of people in your party.", preferredStyle: UIAlertControllerStyle.Alert)
+            splitPrompt.addTextFieldWithConfigurationHandler(addSplitField)
+            splitPrompt.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
+            splitPrompt.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: splitNoTotal))
+            presentViewController(splitPrompt, animated: true, completion: nil)
+            dismissKeyboard()
+        }
+
     }
     
     //Functions
@@ -134,6 +145,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func splitNumEntered(alert: UIAlertAction!) {
         lblSplit.text = "$\(round(100*(totalBill / (Double((newSplitField?.text)!))!))/100) |  each"
+    }
+    
+    func splitNoTotal(alert: UIAlertAction!) {
+        lblSplit.text = "$\(round(100*((Double((txtInput?.text)!))! / (Double((newSplitField?.text)!))!))/100) |  each"
     }
     
     func addSplitField(textField: UITextField!) {
